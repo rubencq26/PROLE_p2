@@ -1,5 +1,4 @@
-¡Qué buena idea! He preparado este **REMAKER** (README de Recordatorio) con un toque de humor y mucha claridad, para que cuando lo leas dentro de dos meses digas: "¡Ah, claro, así funcionaba el bicho este!".
-
+ejecutar javaCC : java -cp javacc.jar javacc -OUTPUT_DIRECTORY="src/main/java/org/example" src\main\java\Analizador.jj   
 ---
 
 # 📑 Guía de Supervivencia: El Lexer de Tinto
