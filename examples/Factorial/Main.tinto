@@ -1,0 +1,30 @@
+
+import Console;
+
+/**
+ * Aplicación que muestra el factorial de un número
+ */
+library Main {
+
+  /**
+   * Punto de entrada de la aplicación
+   */
+  public void Main() {
+    int a=5;
+    int f=factorial(a);
+    Console.print(a);
+    Console.print('!');
+    Console.print('=');
+    Console.print(' ');
+    Console.print(f);
+  }
+
+  /**
+   * Calcula el factorial de un número
+   */
+  private int factorial(int a) {
+    if(a == 1) return 1;
+    int c = factorial(a-1);
+    return a*c;
+  }
+}

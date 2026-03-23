@@ -1,0 +1,108 @@
+
+import Console;
+
+/**
+ * Aplicación para mostrar los números primos entre 1 y 
+ * un cierto valor máximo introducido por consola.
+ * Biblioteca principal.
+ */
+library Main {
+
+  /**
+   * Punto de entrada de la aplicación
+   */
+  public void Main() 
+  {
+    calcularPrimos();
+    boolean sigue = continuar();
+
+    while(sigue)
+    {
+      calcularPrimos();
+      sigue = continuar();
+    }
+
+    Console.print('F');
+    Console.print('I');
+    Console.print('N');
+  }
+
+  /**
+   * Calcula y muestra los números primos entre 1 y 
+   * un cierto valor máximo introducido por consola
+   */
+  private void calcularPrimos()
+  {
+    int a=1;
+    int max = preguntar();
+    while(a < max) 
+    {
+      if( esPrimo(a) ) imprimir(a);
+      a = a +1;
+    }
+  }
+
+  /**
+   * Lee el valor máximo
+   */
+  private int preguntar()
+  {
+    Console.print('M');
+    Console.print('a');
+    Console.print('x');
+    Console.print('?');
+    Console.print(' ');
+    int max = Console.readInt();
+    return max;
+  }
+
+  /**
+   * Pregunta si el usuario desea continuar
+   */
+  private boolean continuar()
+  {
+    Console.print('C');
+    Console.print('o');
+    Console.print('n');
+    Console.print('t');
+    Console.print('i');
+    Console.print('n');
+    Console.print('u');
+    Console.print('a');
+    Console.print('r');
+    Console.print(' ');
+    Console.print('[');
+    Console.print('s');
+    Console.print('/');
+    Console.print('n');
+    Console.print(']');
+    Console.print('?');
+    Console.print(' ');
+    char c = Console.readChar();
+    Console.print('\n');
+    return (c == 's' || c == 'S');
+  }
+
+  /**
+   * Imprime un número entero en la consola
+   */
+  private void imprimir(int i) 
+  {
+    Console.print(i);
+    Console.print('\n');
+  }
+
+  /**
+   * Verifica si un número es primo
+   */
+  private boolean esPrimo(int i) 
+  {
+    int j = 2;
+    while(j<i) 
+    {
+      if(i%j == 0) return false;
+      j = j+1;
+    }
+    return true;
+  }
+}

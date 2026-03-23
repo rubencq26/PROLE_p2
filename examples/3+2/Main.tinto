@@ -1,0 +1,26 @@
+
+import Console;
+
+/**
+ * Aplicación que muestra el resultado de una suma
+ */
+library Main {
+
+  /**
+   * Punto de entrada de la aplicación
+   */
+  public void Main() {
+    int a=3;
+    int b=2;
+    int c= a+b;
+    Console.print(a);
+    Console.print(' ');
+    Console.print('+');
+    Console.print(' ');
+    Console.print(b);
+    Console.print(' ');
+    Console.print('=');
+    Console.print(' ');
+    Console.print(c);
+  }
+}
